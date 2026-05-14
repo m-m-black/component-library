@@ -24,4 +24,5 @@ dist-ssr
 *.sw?
 
 # Local .md files
-*.md
+PRD.md
+ISSUES.md
