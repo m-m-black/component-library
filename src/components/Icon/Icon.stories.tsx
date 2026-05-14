@@ -3,7 +3,7 @@ import { Icon } from './Icon'
 
 const meta = {
   component: Icon,
-  tags: ['autodocs'],
+  tags: [],
   argTypes: {
     name: { control: 'text' },
     size: { control: { type: 'range', min: 12, max: 64, step: 4 } },
