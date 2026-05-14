@@ -1,73 +1,42 @@
-# React + TypeScript + Vite
+# E-Commerce Component Library
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A portfolio React component library built for the e-commerce domain. Components are designed to be composable, accessible, and fully themed — supporting both light and dark modes out of the box.
 
-Currently, two official plugins are available:
+**[View Storybook](https://m-m-black.github.io/component-library/)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Components
 
-## React Compiler
+| Component | Description |
+|---|---|
+| **Button** | Primary, secondary, ghost, and destructive variants with loading state |
+| **Badge** | Semantic sale, new, and out-of-stock labels |
+| **Input / SearchBar** | Text input with icon slot |
+| **Rating** | Star rating display with review count |
+| **PriceDisplay** | Original and discounted price formatting |
+| **ProductCard** | Full product tile with image, rating, price, badge, and add-to-cart |
+| **ProductCarousel** | Horizontally scrollable row of product cards |
+| **CartItem** | Cart line item with quantity stepper and remove action |
+| **Modal** | Accessible overlay dialog |
+| **Drawer** | Slide-in panel |
+| **Toast** | Programmatic feedback notifications |
+| **ThemeToggle** | Light / dark mode switcher |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech stack
 
-## Expanding the ESLint configuration
+- **React 19** + **TypeScript**
+- **Tailwind CSS v4** for styling
+- **Radix UI** primitives for accessible interactive components
+- **Radix Icons** via a typed Icon wrapper
+- **Storybook 10** for component showcase
+- **Vitest** + **React Testing Library** for unit and story tests
+- **Chromatic** for hosted Storybook and visual regression testing
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Running locally
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev          # Dev server
+npm run storybook    # Storybook on localhost:6006
+npm run test         # All tests (unit + story)
+npm run build        # Production build
 ```

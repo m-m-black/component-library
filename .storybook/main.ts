@@ -1,16 +1,21 @@
-import type { StorybookConfig } from '@storybook/react-vite';
+import type { StorybookConfig } from '@storybook/react-vite'
+import type { InlineConfig } from 'vite'
 
 const config: StorybookConfig = {
-  "stories": [
-    "../src/**/*.mdx",
-    "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"
+  stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+  addons: [
+    '@chromatic-com/storybook',
+    '@storybook/addon-vitest',
+    '@storybook/addon-a11y',
+    '@storybook/addon-docs',
   ],
-  "addons": [
-    "@chromatic-com/storybook",
-    "@storybook/addon-vitest",
-    "@storybook/addon-a11y",
-    "@storybook/addon-docs",
-  ],
-  "framework": "@storybook/react-vite"
-};
-export default config;
+  framework: '@storybook/react-vite',
+  viteFinal: async (config: InlineConfig) => {
+    return {
+      ...config,
+      base: process.env.STORYBOOK_BASE_URL ?? '/',
+    }
+  },
+}
+
+export default config
