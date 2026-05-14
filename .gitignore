@@ -28,5 +28,9 @@ CLAUDE.md
 PRD.md
 ISSUES.md
 
+# Environment variables
+.env
+.env.local
+
 *storybook.log
 storybook-static
