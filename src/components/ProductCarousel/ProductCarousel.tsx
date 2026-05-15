@@ -1,8 +1,19 @@
 import { useEffect, useRef, useState } from 'react'
 import type { Product } from '../../api/types'
-import { Button } from '../Button'
-import { Icon } from '../Icon'
+import { Icon, type IconProps } from '../Icon'
 import { ProductCard } from '../ProductCard'
+
+function NavButton({ icon, label, onClick }: { icon: IconProps['name']; label: string; onClick: () => void }) {
+  return (
+    <button
+      aria-label={label}
+      onClick={onClick}
+      className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-text text-background shadow-md hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
+    >
+      <Icon name={icon} size={20} />
+    </button>
+  )
+}
 
 export interface ProductCarouselProps {
   products: Product[]
@@ -75,16 +86,12 @@ export function ProductCarousel({ products, onAddToCart }: ProductCarouselProps)
 
       {canScrollLeft && (
         <div className="absolute left-2 top-1/2 -translate-y-1/2 opacity-100 transition-opacity duration-200 sm:opacity-0 sm:group-hover:opacity-100">
-          <Button variant="secondary" size="sm" aria-label="Previous" onClick={handleScrollLeft}>
-            <Icon name="ChevronLeftIcon" size={16} />
-          </Button>
+          <NavButton icon="ChevronLeftIcon" label="Previous" onClick={handleScrollLeft} />
         </div>
       )}
       {canScrollRight && (
         <div className="absolute right-2 top-1/2 -translate-y-1/2 opacity-100 transition-opacity duration-200 sm:opacity-0 sm:group-hover:opacity-100">
-          <Button variant="secondary" size="sm" aria-label="Next" onClick={handleScrollRight}>
-            <Icon name="ChevronRightIcon" size={16} />
-          </Button>
+          <NavButton icon="ChevronRightIcon" label="Next" onClick={handleScrollRight} />
         </div>
       )}
     </div>
