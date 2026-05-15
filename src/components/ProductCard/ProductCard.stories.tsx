@@ -26,7 +26,7 @@ export const Default: Story = {
 }
 
 export const WithSaleBadge: Story = {
-  args: { product: mockProduct, badge: 'sale' },
+  args: { product: mockProduct, badge: 'sale', originalPrice: 139.95 },
 }
 
 export const WithNewBadge: Story = {
@@ -59,7 +59,7 @@ export const AllVariants: Story = {
   render: () => (
     <div className="flex flex-wrap gap-4">
       <ProductCard product={mockProduct} />
-      <ProductCard product={mockProduct} badge="sale" />
+      <ProductCard product={mockProduct} badge="sale" originalPrice={139.95} />
       <ProductCard product={mockProduct} badge="new" />
       <ProductCard product={mockProduct} badge="out-of-stock" />
     </div>

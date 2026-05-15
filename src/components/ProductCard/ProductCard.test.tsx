@@ -69,4 +69,20 @@ describe('ProductCard', () => {
     render(<ProductCard product={mockProduct} badge="out-of-stock" />)
     expect(screen.getByText('Out of stock')).toBeInTheDocument()
   })
+
+  it('disables add to cart button when out of stock', () => {
+    render(<ProductCard product={mockProduct} badge="out-of-stock" />)
+    expect(screen.getByRole('button', { name: /add to cart/i })).toBeDisabled()
+  })
+
+  it('add to cart button is enabled when not out of stock', () => {
+    render(<ProductCard product={mockProduct} />)
+    expect(screen.getByRole('button', { name: /add to cart/i })).not.toBeDisabled()
+  })
+
+  it('shows strikethrough original price when originalPrice is provided', () => {
+    render(<ProductCard product={mockProduct} badge="sale" originalPrice={139.95} />)
+    expect(screen.getByText('$139.95')).toBeInTheDocument()
+    expect(screen.getByText('$109.95')).toBeInTheDocument()
+  })
 })

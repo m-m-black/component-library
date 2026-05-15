@@ -6,7 +6,7 @@ const buttonVariants = cva(
   [
     'inline-flex items-center justify-center gap-2 rounded font-medium transition-colors cursor-pointer',
     'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2',
-    'disabled:pointer-events-none disabled:opacity-50',
+    'disabled:cursor-not-allowed disabled:opacity-50',
   ],
   {
     variants: {
