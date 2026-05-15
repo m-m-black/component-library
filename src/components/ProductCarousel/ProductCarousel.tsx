@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from 'react'
 import type { Product } from '../../api/types'
-import { Icon, type IconProps } from '../Icon'
+import { Icon, type IconName } from '../Icon'
 import { ProductCard } from '../ProductCard'
 
-function NavButton({ icon, label, onClick }: { icon: IconProps['name']; label: string; onClick: () => void }) {
+function NavButton({ icon, label, onClick }: { icon: IconName; label: string; onClick: () => void }) {
   return (
     <button
       aria-label={label}
