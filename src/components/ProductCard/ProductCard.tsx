@@ -13,7 +13,7 @@ export interface ProductCardProps {
 
 export function ProductCard({ product, badge, originalPrice, onAddToCart }: ProductCardProps) {
   return (
-    <div className="bg-surface border border-border rounded-lg overflow-hidden flex flex-col w-72 h-96">
+    <div className="bg-surface border border-border rounded-lg overflow-hidden flex flex-col w-full sm:w-72 h-96">
       <img
         src={product.image}
         alt={product.title}

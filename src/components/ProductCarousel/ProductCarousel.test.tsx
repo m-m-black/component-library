@@ -36,16 +36,14 @@ const mockProducts: Product[] = [
 describe('ProductCarousel', () => {
   it('renders a card for each product', () => {
     render(<ProductCarousel products={mockProducts} />)
-    // Products are cloned 3× for infinite loop — assert at least one of each
-    mockProducts.forEach((product) => {
-      expect(screen.getAllByText(product.title).length).toBeGreaterThan(0)
-    })
+    expect(screen.getByText('Test Backpack')).toBeInTheDocument()
+    expect(screen.getByText('Test T-Shirt')).toBeInTheDocument()
+    expect(screen.getByText('Test Jacket')).toBeInTheDocument()
   })
 
-  it('renders previous and next navigation buttons', () => {
+  it('renders the correct number of add-to-cart buttons', () => {
     render(<ProductCarousel products={mockProducts} />)
-    expect(screen.getByRole('button', { name: /previous/i })).toBeInTheDocument()
-    expect(screen.getByRole('button', { name: /next/i })).toBeInTheDocument()
+    expect(screen.getAllByRole('button', { name: /add to cart/i })).toHaveLength(3)
   })
 
   it('calls onAddToCart with the correct product when a card button is clicked', async () => {
