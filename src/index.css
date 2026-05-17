@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import '@fontsource-variable/dm-sans';
 
 /* ─── Theme: map Tailwind utilities to CSS variables ─────────────────────── */
 @theme inline {
@@ -19,36 +20,36 @@
 
 /* ─── Light mode tokens ───────────────────────────────────────────────────── */
 :root {
-  --background: oklch(100% 0 0); /* white */
-  --surface: oklch(98% 0.004 250); /* slate-50 */
-  --surface-raised: oklch(100% 0 0); /* white */
-  --border: oklch(90% 0.006 250); /* slate-200 */
-  --text: oklch(20% 0.02 250); /* slate-900 */
-  --text-muted: oklch(50% 0.015 250); /* slate-500 */
-  --accent: oklch(55% 0.24 270); /* indigo-600 */
-  --accent-foreground: oklch(100% 0 0); /* white */
-  --success: oklch(55% 0.17 145); /* green-600 */
-  --success-subtle: oklch(97% 0.05 145); /* green-50 */
-  --destructive: oklch(55% 0.22 25); /* red-600 */
-  --destructive-subtle: oklch(97% 0.04 25); /* red-50 */
-  --warning: oklch(72% 0.18 70); /* amber-500 */
+  --background: oklch(98% 0.008 80); /* warm cream */
+  --surface: oklch(96% 0.012 80); /* warm off-white */
+  --surface-raised: oklch(99% 0.005 80); /* near-white warm */
+  --border: oklch(88% 0.018 80); /* warm beige */
+  --text: oklch(22% 0.02 60); /* warm dark brown */
+  --text-muted: oklch(52% 0.018 70); /* warm mid-brown */
+  --accent: oklch(47% 0.11 128); /* olive green */
+  --accent-foreground: oklch(98% 0 0); /* white */
+  --success: oklch(52% 0.15 145); /* forest green */
+  --success-subtle: oklch(96% 0.04 145); /* light green tint */
+  --destructive: oklch(54% 0.20 28); /* warm rust */
+  --destructive-subtle: oklch(96% 0.04 28); /* light rust tint */
+  --warning: oklch(68% 0.17 72); /* warm amber */
 }
 
 /* ─── Dark mode tokens ────────────────────────────────────────────────────── */
 .dark {
-  --background: oklch(14% 0.02 250); /* slate-950 */
-  --surface: oklch(20% 0.02 250); /* slate-900 */
-  --surface-raised: oklch(25% 0.02 250); /* slate-800 */
-  --border: oklch(30% 0.02 250); /* slate-700 */
-  --text: oklch(97% 0.004 250); /* slate-50 */
-  --text-muted: oklch(65% 0.012 250); /* slate-400 */
-  --accent: oklch(65% 0.22 270); /* indigo-400 */
-  --accent-foreground: oklch(100% 0 0); /* white */
-  --success: oklch(68% 0.17 145); /* green-400 */
-  --success-subtle: oklch(22% 0.07 145); /* green-950 */
-  --destructive: oklch(68% 0.2 25); /* red-400 */
-  --destructive-subtle: oklch(22% 0.07 25); /* red-950 */
-  --warning: oklch(82% 0.16 70); /* amber-300 */
+  --background: oklch(16% 0.015 70); /* dark warm charcoal */
+  --surface: oklch(21% 0.015 70); /* dark warm brown */
+  --surface-raised: oklch(26% 0.015 70); /* lifted dark warm */
+  --border: oklch(33% 0.015 70); /* warm dark border */
+  --text: oklch(95% 0.008 80); /* warm off-white */
+  --text-muted: oklch(65% 0.012 75); /* warm mid-tone */
+  --accent: oklch(57% 0.12 128); /* muted olive green */
+  --accent-foreground: oklch(98% 0 0); /* white */
+  --success: oklch(65% 0.15 145); /* lighter forest green */
+  --success-subtle: oklch(22% 0.07 145); /* dark green tint */
+  --destructive: oklch(67% 0.19 28); /* lighter warm rust */
+  --destructive-subtle: oklch(22% 0.07 28); /* dark rust tint */
+  --warning: oklch(80% 0.16 72); /* bright warm amber */
 }
 
 /* ─── Utilities ───────────────────────────────────────────────────────────── */
@@ -67,6 +68,7 @@
   body {
     background-color: var(--background);
     color: var(--text);
+    font-family: 'DM Sans Variable', sans-serif;
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
