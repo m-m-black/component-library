@@ -47,10 +47,7 @@ export const Default: Story = {
 export const WithDescription: Story = {
   args: { open: false, onOpenChange: () => {}, title: 'Added to cart' },
   render: () => (
-    <ToastDemo
-      title="Added to cart"
-      description="2× Running Shoes have been added to your cart."
-    />
+    <ToastDemo title="Added to cart" description="2× Running Shoes have been added to your cart." />
   ),
 }
 
@@ -77,8 +74,18 @@ export const AllVariants: Story = {
   render: () => (
     <div className="flex flex-wrap gap-4">
       <ToastDemo buttonLabel="Add to cart" title="Item added" />
-      <ToastDemo buttonLabel="Place order" variant="success" title="Order placed" description="Your order is confirmed." />
-      <ToastDemo buttonLabel="Trigger error" variant="destructive" title="Error" description="Something went wrong." />
+      <ToastDemo
+        buttonLabel="Place order"
+        variant="success"
+        title="Order placed"
+        description="Your order is confirmed."
+      />
+      <ToastDemo
+        buttonLabel="Trigger error"
+        variant="destructive"
+        title="Error"
+        description="Something went wrong."
+      />
     </div>
   ),
 }

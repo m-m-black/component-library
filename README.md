@@ -6,20 +6,20 @@ A portfolio React component library built for the e-commerce domain. Components 
 
 ## Components
 
-| Component | Description |
-|---|---|
-| **Button** | Primary, secondary, ghost, and destructive variants with loading state |
-| **Badge** | Semantic sale, new, and out-of-stock labels |
-| **Input / SearchBar** | Text input with icon slot |
-| **Rating** | Star rating display with review count |
-| **PriceDisplay** | Original and discounted price formatting |
-| **ProductCard** | Full product tile with image, rating, price, badge, and add-to-cart |
-| **ProductCarousel** | Horizontally scrollable row of product cards |
-| **CartItem** | Cart line item with quantity stepper and remove action |
-| **Modal** | Accessible overlay dialog |
-| **Drawer** | Slide-in panel |
-| **Toast** | Programmatic feedback notifications |
-| **ThemeToggle** | Light / dark mode switcher |
+| Component             | Description                                                            |
+| --------------------- | ---------------------------------------------------------------------- |
+| **Button**            | Primary, secondary, ghost, and destructive variants with loading state |
+| **Badge**             | Semantic sale, new, and out-of-stock labels                            |
+| **Input / SearchBar** | Text input with icon slot                                              |
+| **Rating**            | Star rating display with review count                                  |
+| **PriceDisplay**      | Original and discounted price formatting                               |
+| **ProductCard**       | Full product tile with image, rating, price, badge, and add-to-cart    |
+| **ProductCarousel**   | Horizontally scrollable row of product cards                           |
+| **CartItem**          | Cart line item with quantity stepper and remove action                 |
+| **Modal**             | Accessible overlay dialog                                              |
+| **Drawer**            | Slide-in panel                                                         |
+| **Toast**             | Programmatic feedback notifications                                    |
+| **ThemeToggle**       | Light / dark mode switcher                                             |
 
 ## Tech stack
 

@@ -32,7 +32,7 @@
   --accent-foreground: oklch(98% 0 0); /* white */
   --success: oklch(52% 0.15 145); /* forest green */
   --success-subtle: oklch(96% 0.04 145); /* light green tint */
-  --destructive: oklch(54% 0.20 28); /* warm rust */
+  --destructive: oklch(54% 0.2 28); /* warm rust */
   --destructive-subtle: oklch(96% 0.04 28); /* light rust tint */
   --warning: oklch(68% 0.17 72); /* warm amber */
 }

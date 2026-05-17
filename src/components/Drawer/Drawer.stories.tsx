@@ -18,7 +18,9 @@ export const Default: Story = {
     children: (
       <div className="flex flex-col gap-4">
         <p className="text-text-muted text-sm">Your cart is empty.</p>
-        <DrawerClose><Button className="w-full">Continue shopping</Button></DrawerClose>
+        <DrawerClose>
+          <Button className="w-full">Continue shopping</Button>
+        </DrawerClose>
       </div>
     ),
   },

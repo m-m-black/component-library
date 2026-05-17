@@ -7,9 +7,7 @@ interface ThemeToggleProps {
 }
 
 export function ThemeToggle({ className }: ThemeToggleProps) {
-  const [dark, setDark] = useState(
-    () => document.documentElement.classList.contains('dark')
-  )
+  const [dark, setDark] = useState(() => document.documentElement.classList.contains('dark'))
 
   const toggle = () => {
     setDark((prev) => {

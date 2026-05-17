@@ -17,7 +17,9 @@ export const Default: Story = {
     description: 'Are you sure you want to complete this purchase?',
     children: (
       <div className="flex justify-end gap-3 mt-4">
-        <ModalClose><Button variant="secondary">Cancel</Button></ModalClose>
+        <ModalClose>
+          <Button variant="secondary">Cancel</Button>
+        </ModalClose>
         <Button>Confirm</Button>
       </div>
     ),
@@ -52,14 +54,13 @@ export const AllVariants: Story = {
         description="Are you sure you want to complete this purchase?"
       >
         <div className="flex justify-end gap-3 mt-4">
-          <ModalClose><Button variant="secondary">Cancel</Button></ModalClose>
+          <ModalClose>
+            <Button variant="secondary">Cancel</Button>
+          </ModalClose>
           <Button>Confirm</Button>
         </div>
       </Modal>
-      <Modal
-        trigger={<Button variant="secondary">Info modal</Button>}
-        title="Product details"
-      >
+      <Modal trigger={<Button variant="secondary">Info modal</Button>} title="Product details">
         <p className="text-text-muted text-sm">Details about this product.</p>
       </Modal>
     </div>

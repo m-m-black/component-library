@@ -3,7 +3,15 @@ import type { Product } from '../../api/types'
 import { Icon, type IconName } from '../Icon'
 import { ProductCard } from '../ProductCard'
 
-function NavButton({ icon, label, onClick }: { icon: IconName; label: string; onClick: () => void }) {
+function NavButton({
+  icon,
+  label,
+  onClick,
+}: {
+  icon: IconName
+  label: string
+  onClick: () => void
+}) {
   return (
     <button
       aria-label={label}
@@ -51,7 +59,9 @@ export function ProductCarousel({ products, onAddToCart }: ProductCarouselProps)
   if (products.length === 0) return null
 
   function getCards(): HTMLElement[] {
-    return Array.from(scrollRef.current?.querySelectorAll('[data-carousel-card]') ?? []) as HTMLElement[]
+    return Array.from(
+      scrollRef.current?.querySelectorAll('[data-carousel-card]') ?? []
+    ) as HTMLElement[]
   }
 
   function handleScrollRight() {
@@ -59,7 +69,8 @@ export function ProductCarousel({ products, onAddToCart }: ProductCarouselProps)
     if (!el) return
     const { left: cLeft, right: cRight } = el.getBoundingClientRect()
     const rightmost = [...getCards()].reverse().find((c) => c.getBoundingClientRect().left < cRight)
-    if (rightmost) el.scrollBy({ left: rightmost.getBoundingClientRect().left - cLeft, behavior: 'smooth' })
+    if (rightmost)
+      el.scrollBy({ left: rightmost.getBoundingClientRect().left - cLeft, behavior: 'smooth' })
   }
 
   function handleScrollLeft() {
@@ -67,7 +78,8 @@ export function ProductCarousel({ products, onAddToCart }: ProductCarouselProps)
     if (!el) return
     const { left: cLeft, right: cRight } = el.getBoundingClientRect()
     const leftmost = getCards().find((c) => c.getBoundingClientRect().right > cLeft)
-    if (leftmost) el.scrollBy({ left: leftmost.getBoundingClientRect().right - cRight, behavior: 'smooth' })
+    if (leftmost)
+      el.scrollBy({ left: leftmost.getBoundingClientRect().right - cRight, behavior: 'smooth' })
   }
 
   return (

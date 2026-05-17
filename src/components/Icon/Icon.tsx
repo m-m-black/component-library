@@ -10,7 +10,13 @@ interface IconProps {
   'aria-label'?: string
 }
 
-export function Icon({ name, size = 16, color = 'currentColor', className, 'aria-label': ariaLabel }: IconProps) {
+export function Icon({
+  name,
+  size = 16,
+  color = 'currentColor',
+  className,
+  'aria-label': ariaLabel,
+}: IconProps) {
   const IconComponent = RadixIcons[name]
   return (
     <IconComponent

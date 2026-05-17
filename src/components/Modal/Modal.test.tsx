@@ -11,7 +11,9 @@ function renderModal(props = {}) {
       description="Test description"
       {...props}
     >
-      <ModalClose><Button variant="secondary">Cancel</Button></ModalClose>
+      <ModalClose>
+        <Button variant="secondary">Cancel</Button>
+      </ModalClose>
       <p>Modal content</p>
     </Modal>
   )

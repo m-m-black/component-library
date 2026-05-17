@@ -6,7 +6,9 @@ import { Button } from '../Button'
 function renderDrawer(props = {}) {
   return render(
     <Drawer trigger={<Button>Open</Button>} title="Test drawer" {...props}>
-      <DrawerClose><Button>Continue shopping</Button></DrawerClose>
+      <DrawerClose>
+        <Button>Continue shopping</Button>
+      </DrawerClose>
       <p>Drawer content</p>
     </Drawer>
   )

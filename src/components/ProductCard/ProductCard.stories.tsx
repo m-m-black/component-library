@@ -13,10 +13,10 @@ type Story = StoryObj<typeof meta>
 
 const mockProduct: Product = {
   id: 1,
-  title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+  title: 'Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops',
   price: 109.95,
   category: "men's clothing",
-  description: "Your perfect pack for everyday use and walks in the forest.",
+  description: 'Your perfect pack for everyday use and walks in the forest.',
   image: '/images/product-1.png',
   rating: { rate: 3.9, count: 120 },
 }

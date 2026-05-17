@@ -16,7 +16,7 @@ const mockProducts: Product[] = [
   {
     id: 2,
     title: 'Test T-Shirt',
-    price: 22.30,
+    price: 22.3,
     category: "men's clothing",
     description: 'A slim-fit tee.',
     image: '/images/product-2.png',

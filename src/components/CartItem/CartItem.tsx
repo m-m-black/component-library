@@ -3,7 +3,17 @@ import { Button } from '../Button'
 import { Icon } from '../Icon'
 import { PriceDisplay } from '../PriceDisplay'
 
-function QuantityButton({ icon, label, onClick, disabled }: { icon: 'MinusIcon' | 'PlusIcon'; label: string; onClick: () => void; disabled?: boolean }) {
+function QuantityButton({
+  icon,
+  label,
+  onClick,
+  disabled,
+}: {
+  icon: 'MinusIcon' | 'PlusIcon'
+  label: string
+  onClick: () => void
+  disabled?: boolean
+}) {
   return (
     <button
       aria-label={label}

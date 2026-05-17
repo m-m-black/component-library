@@ -30,7 +30,14 @@ export interface ToastProps extends VariantProps<typeof toastVariants> {
   duration?: number
 }
 
-export function Toast({ open, onOpenChange, title, description, duration = 4000, variant }: ToastProps) {
+export function Toast({
+  open,
+  onOpenChange,
+  title,
+  description,
+  duration = 4000,
+  variant,
+}: ToastProps) {
   return (
     <RadixToast.Root
       open={open}
