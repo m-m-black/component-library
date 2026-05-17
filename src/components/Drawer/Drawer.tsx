@@ -29,7 +29,7 @@ export function Drawer({ trigger, title, description, children, open, onOpenChan
         />
         <Dialog.Content
           className={cn(
-            'fixed right-0 top-0 z-50 h-full w-full max-w-sm bg-surface-raised p-6 shadow-lg',
+            'fixed right-0 top-0 z-50 h-full w-4/5 max-w-sm bg-surface-raised p-6 shadow-lg',
             'data-[state=open]:animate-in data-[state=closed]:animate-out',
             'data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right'
           )}

@@ -30,7 +30,7 @@ const preview: Preview = {
     viewport: {
       options: {
         mobile: { name: 'Mobile', styles: { width: '390px', height: '844px' } },
-        desktop: { name: 'Desktop', styles: { width: '1280px', height: '900px' } },
+        desktop: { name: 'Desktop', styles: { width: '1024px', height: '900px' } },
       },
       defaultViewport: 'desktop',
     },
