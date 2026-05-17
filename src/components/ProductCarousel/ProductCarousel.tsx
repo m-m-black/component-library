@@ -8,7 +8,7 @@ function NavButton({ icon, label, onClick }: { icon: IconName; label: string; on
     <button
       aria-label={label}
       onClick={onClick}
-      className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-text text-background shadow-md hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
+      className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-text text-background shadow-md hover:bg-text-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
     >
       <Icon name={icon} size={20} />
     </button>

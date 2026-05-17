@@ -8,6 +8,7 @@
   --color-surface-raised: var(--surface-raised);
   --color-border: var(--border);
   --color-text: var(--text);
+  --color-text-hover: var(--text-hover);
   --color-text-muted: var(--text-muted);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
@@ -25,6 +26,7 @@
   --surface-raised: oklch(99% 0.005 80); /* near-white warm */
   --border: oklch(88% 0.018 80); /* warm beige */
   --text: oklch(22% 0.02 60); /* warm dark brown */
+  --text-hover: oklch(34% 0.02 60); /* warm dark brown — lifted for hover */
   --text-muted: oklch(52% 0.018 70); /* warm mid-brown */
   --accent: oklch(47% 0.11 128); /* olive green */
   --accent-foreground: oklch(98% 0 0); /* white */
@@ -42,6 +44,7 @@
   --surface-raised: oklch(26% 0.015 70); /* lifted dark warm */
   --border: oklch(33% 0.015 70); /* warm dark border */
   --text: oklch(95% 0.008 80); /* warm off-white */
+  --text-hover: oklch(83% 0.008 80); /* warm off-white — dimmed for hover */
   --text-muted: oklch(65% 0.012 75); /* warm mid-tone */
   --accent: oklch(57% 0.12 128); /* muted olive green */
   --accent-foreground: oklch(98% 0 0); /* white */
