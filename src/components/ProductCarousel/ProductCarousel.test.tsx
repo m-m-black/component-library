@@ -36,9 +36,9 @@ const mockProducts: Product[] = [
 describe('ProductCarousel', () => {
   it('renders a card for each product', () => {
     render(<ProductCarousel products={mockProducts} />)
-    expect(screen.getByText('Test Backpack')).toBeInTheDocument()
-    expect(screen.getByText('Test T-Shirt')).toBeInTheDocument()
-    expect(screen.getByText('Test Jacket')).toBeInTheDocument()
+    expect(screen.getByText('Test Backpack')).toBeVisible()
+    expect(screen.getByText('Test T-Shirt')).toBeVisible()
+    expect(screen.getByText('Test Jacket')).toBeVisible()
   })
 
   it('renders the correct number of add-to-cart buttons', () => {

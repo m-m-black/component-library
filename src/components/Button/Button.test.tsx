@@ -5,7 +5,7 @@ import { Button } from './Button'
 describe('Button', () => {
   it('renders children', () => {
     render(<Button>Add to cart</Button>)
-    expect(screen.getByRole('button', { name: /add to cart/i })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /add to cart/i })).toBeVisible()
   })
 
   it('fires onClick when clicked', async () => {
@@ -46,6 +46,6 @@ describe('Button', () => {
 
   it('applies the destructive variant', () => {
     render(<Button variant="destructive">Delete</Button>)
-    expect(screen.getByRole('button', { name: /delete/i })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /delete/i })).toBeVisible()
   })
 })

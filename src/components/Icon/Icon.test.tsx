@@ -4,7 +4,7 @@ import { Icon } from './Icon'
 describe('Icon', () => {
   it('renders an SVG element', () => {
     const { container } = render(<Icon name="StarIcon" />)
-    expect(container.querySelector('svg')).toBeInTheDocument()
+    expect(container.querySelector('svg')).toBeVisible()
   })
 
   it('applies size to width and height', () => {
@@ -28,6 +28,6 @@ describe('Icon', () => {
 
   it('exposes an accessible label when aria-label is provided', () => {
     render(<Icon name="StarIcon" aria-label="Favourite" />)
-    expect(screen.getByLabelText('Favourite')).toBeInTheDocument()
+    expect(screen.getByLabelText('Favourite')).toBeVisible()
   })
 })

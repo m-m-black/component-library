@@ -16,7 +16,7 @@ const mockProduct: Product = {
 describe('ProductCard', () => {
   it('renders the product title', () => {
     render(<ProductCard product={mockProduct} />)
-    expect(screen.getByText('Test Backpack')).toBeInTheDocument()
+    expect(screen.getByText('Test Backpack')).toBeVisible()
   })
 
   it('renders the product image with alt text', () => {
@@ -27,18 +27,18 @@ describe('ProductCard', () => {
 
   it('renders the product price', () => {
     render(<ProductCard product={mockProduct} />)
-    expect(screen.getByText('$109.95')).toBeInTheDocument()
+    expect(screen.getByText('$109.95')).toBeVisible()
   })
 
   it('renders the rating', () => {
     render(<ProductCard product={mockProduct} />)
-    expect(screen.getByLabelText('4 out of 5 stars')).toBeInTheDocument()
-    expect(screen.getByText('(120)')).toBeInTheDocument()
+    expect(screen.getByLabelText('4 out of 5 stars')).toBeVisible()
+    expect(screen.getByText('(120)')).toBeVisible()
   })
 
   it('renders an add to cart button', () => {
     render(<ProductCard product={mockProduct} />)
-    expect(screen.getByRole('button', { name: /add to cart/i })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /add to cart/i })).toBeVisible()
   })
 
   it('calls onAddToCart with the product when button is clicked', async () => {
@@ -57,17 +57,17 @@ describe('ProductCard', () => {
 
   it('renders the sale badge when badge="sale"', () => {
     render(<ProductCard product={mockProduct} badge="sale" />)
-    expect(screen.getByText('Sale')).toBeInTheDocument()
+    expect(screen.getByText('Sale')).toBeVisible()
   })
 
   it('renders the new badge when badge="new"', () => {
     render(<ProductCard product={mockProduct} badge="new" />)
-    expect(screen.getByText('New')).toBeInTheDocument()
+    expect(screen.getByText('New')).toBeVisible()
   })
 
   it('renders the out-of-stock badge when badge="out-of-stock"', () => {
     render(<ProductCard product={mockProduct} badge="out-of-stock" />)
-    expect(screen.getByText('Out of stock')).toBeInTheDocument()
+    expect(screen.getByText('Out of stock')).toBeVisible()
   })
 
   it('disables add to cart button when out of stock', () => {
@@ -82,7 +82,7 @@ describe('ProductCard', () => {
 
   it('shows strikethrough original price when originalPrice is provided', () => {
     render(<ProductCard product={mockProduct} badge="sale" originalPrice={139.95} />)
-    expect(screen.getByText('$139.95')).toBeInTheDocument()
-    expect(screen.getByText('$109.95')).toBeInTheDocument()
+    expect(screen.getByText('$139.95')).toBeVisible()
+    expect(screen.getByText('$109.95')).toBeVisible()
   })
 })

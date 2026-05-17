@@ -23,8 +23,8 @@ describe('Drawer', () => {
   it('opens when the trigger is clicked', async () => {
     renderDrawer()
     await userEvent.click(screen.getByRole('button', { name: /open/i }))
-    expect(screen.getByText('Test drawer')).toBeInTheDocument()
-    expect(screen.getByText('Drawer content')).toBeInTheDocument()
+    expect(screen.getByText('Test drawer')).toBeVisible()
+    expect(screen.getByText('Drawer content')).toBeVisible()
   })
 
   it('closes when the close button is clicked', async () => {

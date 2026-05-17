@@ -4,7 +4,7 @@ import { PriceDisplay } from './PriceDisplay'
 describe('PriceDisplay', () => {
   it('renders the price', () => {
     render(<PriceDisplay price={29.99} />)
-    expect(screen.getByText('$29.99')).toBeInTheDocument()
+    expect(screen.getByText('$29.99')).toBeVisible()
   })
 
   it('does not render a struck-through price when no originalPrice is given', () => {
@@ -14,8 +14,8 @@ describe('PriceDisplay', () => {
 
   it('renders both prices when originalPrice is greater than price', () => {
     render(<PriceDisplay price={19.99} originalPrice={29.99} />)
-    expect(screen.getByText('$19.99')).toBeInTheDocument()
-    expect(screen.getByText('$29.99')).toBeInTheDocument()
+    expect(screen.getByText('$19.99')).toBeVisible()
+    expect(screen.getByText('$29.99')).toBeVisible()
   })
 
   it('renders the original price with a strikethrough', () => {
@@ -30,6 +30,6 @@ describe('PriceDisplay', () => {
 
   it('formats prices with two decimal places', () => {
     render(<PriceDisplay price={10} />)
-    expect(screen.getByText('$10.00')).toBeInTheDocument()
+    expect(screen.getByText('$10.00')).toBeVisible()
   })
 })

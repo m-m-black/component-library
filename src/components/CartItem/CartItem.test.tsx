@@ -30,22 +30,22 @@ function renderCartItem(props: Partial<React.ComponentProps<typeof CartItem>> = 
 describe('CartItem', () => {
   it('renders the product name', () => {
     renderCartItem()
-    expect(screen.getByText('Test Backpack')).toBeInTheDocument()
+    expect(screen.getByText('Test Backpack')).toBeVisible()
   })
 
   it('renders the product image', () => {
     renderCartItem()
-    expect(screen.getByRole('img', { name: 'Test Backpack' })).toBeInTheDocument()
+    expect(screen.getByRole('img', { name: 'Test Backpack' })).toBeVisible()
   })
 
   it('renders the product price', () => {
     renderCartItem()
-    expect(screen.getByText('$109.95')).toBeInTheDocument()
+    expect(screen.getByText('$109.95')).toBeVisible()
   })
 
   it('renders the current quantity', () => {
     renderCartItem({ quantity: 3 })
-    expect(screen.getByText('3')).toBeInTheDocument()
+    expect(screen.getByText('3')).toBeVisible()
   })
 
   it('calls onQuantityChange with incremented value when + is clicked', async () => {

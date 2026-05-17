@@ -22,12 +22,12 @@ function renderToast(props: Partial<React.ComponentProps<typeof Toast>> = {}) {
 describe('Toast', () => {
   it('renders the title when open', () => {
     renderToast()
-    expect(screen.getByText('Test toast')).toBeInTheDocument()
+    expect(screen.getByText('Test toast')).toBeVisible()
   })
 
   it('renders the description when provided', () => {
     renderToast()
-    expect(screen.getByText('Test description')).toBeInTheDocument()
+    expect(screen.getByText('Test description')).toBeVisible()
   })
 
   it('does not render when open is false', () => {

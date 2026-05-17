@@ -28,9 +28,9 @@ describe('Modal', () => {
   it('opens when the trigger is clicked', async () => {
     renderModal()
     await userEvent.click(screen.getByRole('button', { name: /open/i }))
-    expect(screen.getByText('Test modal')).toBeInTheDocument()
-    expect(screen.getByText('Test description')).toBeInTheDocument()
-    expect(screen.getByText('Modal content')).toBeInTheDocument()
+    expect(screen.getByText('Test modal')).toBeVisible()
+    expect(screen.getByText('Test description')).toBeVisible()
+    expect(screen.getByText('Modal content')).toBeVisible()
   })
 
   it('closes when the close button is clicked', async () => {

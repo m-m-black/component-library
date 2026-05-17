@@ -9,12 +9,12 @@ afterEach(() => {
 describe('ThemeToggle', () => {
   it('renders a button with an accessible label', () => {
     render(<ThemeToggle />)
-    expect(screen.getByRole('button', { name: /switch to dark mode/i })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /switch to dark mode/i })).toBeVisible()
   })
 
   it('shows the sun icon in light mode', () => {
     render(<ThemeToggle />)
-    expect(screen.getByLabelText('Switch to dark mode')).toBeInTheDocument()
+    expect(screen.getByLabelText('Switch to dark mode')).toBeVisible()
   })
 
   it('adds the dark class to html element when clicked', async () => {
@@ -33,12 +33,12 @@ describe('ThemeToggle', () => {
   it('updates the aria-label to reflect dark mode after toggle', async () => {
     render(<ThemeToggle />)
     await userEvent.click(screen.getByRole('button'))
-    expect(screen.getByRole('button', { name: /switch to light mode/i })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /switch to light mode/i })).toBeVisible()
   })
 
   it('initialises in dark mode if html already has dark class', () => {
     document.documentElement.classList.add('dark')
     render(<ThemeToggle />)
-    expect(screen.getByRole('button', { name: /switch to light mode/i })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /switch to light mode/i })).toBeVisible()
   })
 })
