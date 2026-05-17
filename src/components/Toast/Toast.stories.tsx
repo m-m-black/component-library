@@ -47,7 +47,7 @@ export const Default: Story = {
 export const WithDescription: Story = {
   args: { open: false, onOpenChange: () => {}, title: 'Added to cart' },
   render: () => (
-    <ToastDemo title="Added to cart" description="2× Running Shoes have been added to your cart." />
+    <ToastDemo title="Added to cart" description="2x Running Shoes have been added to your cart." />
   ),
 }
 

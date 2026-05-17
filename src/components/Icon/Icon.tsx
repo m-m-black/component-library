@@ -18,6 +18,7 @@ export function Icon({
   'aria-label': ariaLabel,
 }: IconProps) {
   const IconComponent = RadixIcons[name]
+
   return (
     <IconComponent
       width={size}
