@@ -32,7 +32,7 @@ export const WithLongContent: Story = {
     title: 'Product details',
     children: (
       <div className="space-y-3 text-sm text-text-muted">
-        <p>This premium product is crafted from the finest materials available.</p>
+        <p>This product is crafted from the finest materials available.</p>
         <p>Free shipping on orders over $50. Returns accepted within 30 days.</p>
         <p>Available in multiple sizes and colours. See our size guide for more information.</p>
       </div>
