@@ -1,3 +1,4 @@
+import { cn } from '../../lib/utils'
 import { Icon } from '../Icon'
 
 const TOTAL_STARS = 5
@@ -12,15 +13,12 @@ export function Rating({ value, count, className }: RatingProps) {
   const filled = Math.round(Math.min(Math.max(value, 0), TOTAL_STARS))
 
   return (
-    <div className={`inline-flex items-center gap-1.5 ${className ?? ''}`}>
-      <div className="flex items-center" aria-label={`${value} out of ${TOTAL_STARS} stars`}>
+    <div className={cn('inline-flex items-center gap-1.5', className)}>
+      <div className="flex items-center" aria-label={`${filled} out of ${TOTAL_STARS} stars`}>
         {Array.from({ length: TOTAL_STARS }, (_, i) => (
-          <Icon
-            key={i}
-            name={i < filled ? 'StarFilledIcon' : 'StarIcon'}
-            size={14}
-            color={i < filled ? 'var(--warning)' : 'var(--border)'}
-          />
+          <span key={i} className={i < filled ? 'text-warning' : 'text-border'}>
+            <Icon name={i < filled ? 'StarFilledIcon' : 'StarIcon'} size={14} />
+          </span>
         ))}
       </div>
       {count !== undefined && (

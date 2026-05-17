@@ -51,7 +51,9 @@ export function CartItem({ product, quantity, onQuantityChange, onRemove }: Cart
           />
         </div>
         <Button variant="ghost" size="sm" aria-label="Remove item" onClick={onRemove}>
-          <Icon name="TrashIcon" size={14} color="var(--destructive)" />
+          <span className="text-destructive">
+            <Icon name="TrashIcon" size={14} />
+          </span>
         </Button>
       </div>
     </div>

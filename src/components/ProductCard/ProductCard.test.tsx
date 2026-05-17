@@ -32,7 +32,7 @@ describe('ProductCard', () => {
 
   it('renders the rating', () => {
     render(<ProductCard product={mockProduct} />)
-    expect(screen.getByLabelText('3.9 out of 5 stars')).toBeInTheDocument()
+    expect(screen.getByLabelText('4 out of 5 stars')).toBeInTheDocument()
     expect(screen.getByText('(120)')).toBeInTheDocument()
   })
 

@@ -8,8 +8,8 @@ describe('PriceDisplay', () => {
   })
 
   it('does not render a struck-through price when no originalPrice is given', () => {
-    const { container } = render(<PriceDisplay price={29.99} />)
-    expect(container.querySelector('.line-through')).not.toBeInTheDocument()
+    render(<PriceDisplay price={29.99} />)
+    expect(screen.queryByRole('deletion')).not.toBeInTheDocument()
   })
 
   it('renders both prices when originalPrice is greater than price', () => {
@@ -19,13 +19,13 @@ describe('PriceDisplay', () => {
   })
 
   it('renders the original price with a strikethrough', () => {
-    const { container } = render(<PriceDisplay price={19.99} originalPrice={29.99} />)
-    expect(container.querySelector('.line-through')).toHaveTextContent('$29.99')
+    render(<PriceDisplay price={19.99} originalPrice={29.99} />)
+    expect(screen.getByRole('deletion')).toHaveTextContent('$29.99')
   })
 
   it('does not show strikethrough when originalPrice equals price', () => {
-    const { container } = render(<PriceDisplay price={29.99} originalPrice={29.99} />)
-    expect(container.querySelector('.line-through')).not.toBeInTheDocument()
+    render(<PriceDisplay price={29.99} originalPrice={29.99} />)
+    expect(screen.queryByRole('deletion')).not.toBeInTheDocument()
   })
 
   it('formats prices with two decimal places', () => {

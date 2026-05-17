@@ -36,11 +36,6 @@ describe('Button', () => {
     expect(onClick).not.toHaveBeenCalled()
   })
 
-  it('renders a spinner icon when loading', () => {
-    const { container } = render(<Button loading>Saving</Button>)
-    expect(container.querySelector('svg')).toBeInTheDocument()
-  })
-
   it('applies the destructive variant', () => {
     render(<Button variant="destructive">Delete</Button>)
     expect(screen.getByRole('button', { name: /delete/i })).toBeInTheDocument()

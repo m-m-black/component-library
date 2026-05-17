@@ -30,7 +30,7 @@ const labels: Record<NonNullable<BadgeProps['variant']>, string> = {
 export function Badge({ variant = 'new', className, ...props }: BadgeProps) {
   return (
     <span className={cn(badgeVariants({ variant }), className)} {...props}>
-      {labels[variant!]}
+      {labels[variant ?? 'new']}
     </span>
   )
 }
