@@ -17,7 +17,7 @@ const mockProduct: Product = {
   price: 109.95,
   category: "men's clothing",
   description: 'Your perfect pack for everyday use and walks in the forest.',
-  image: '/images/product-1.png',
+  image: `${import.meta.env.BASE_URL}images/product-1.png`,
   rating: { rate: 3.9, count: 120 },
 }
 

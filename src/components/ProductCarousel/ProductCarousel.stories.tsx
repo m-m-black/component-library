@@ -11,6 +11,8 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
+const img = (id: number) => `${import.meta.env.BASE_URL}images/product-${id}.png`
+
 // Fallback data used when the Fake Store API is unavailable
 const mockProducts: Product[] = [
   {
@@ -19,7 +21,7 @@ const mockProducts: Product[] = [
     price: 109.95,
     category: "men's clothing",
     description: 'Your perfect pack for everyday use and walks in the forest.',
-    image: '/images/product-1.png',
+    image: img(1),
     rating: { rate: 3.9, count: 120 },
   },
   {
@@ -28,7 +30,7 @@ const mockProducts: Product[] = [
     price: 22.3,
     category: "men's clothing",
     description: 'Slim-fitting style, contrast raglan long sleeve, three-button cuff.',
-    image: '/images/product-2.png',
+    image: img(2),
     rating: { rate: 4.1, count: 259 },
   },
   {
@@ -37,7 +39,7 @@ const mockProducts: Product[] = [
     price: 55.99,
     category: "men's clothing",
     description: 'Great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions.',
-    image: '/images/product-3.png',
+    image: img(3),
     rating: { rate: 4.7, count: 500 },
   },
   {
@@ -46,7 +48,7 @@ const mockProducts: Product[] = [
     price: 15.99,
     category: "men's clothing",
     description: 'The color could be slightly different between on the screen and in practice.',
-    image: '/images/product-4.png',
+    image: img(4),
     rating: { rate: 2.1, count: 430 },
   },
   {
@@ -55,7 +57,7 @@ const mockProducts: Product[] = [
     price: 695,
     category: 'jewelery',
     description: 'From our Legends Collection, the Naga was inspired by the mythical water dragon.',
-    image: '/images/product-5.png',
+    image: img(5),
     rating: { rate: 4.6, count: 400 },
   },
   {
@@ -64,7 +66,7 @@ const mockProducts: Product[] = [
     price: 168,
     category: 'jewelery',
     description: 'Satisfaction Guaranteed. Return or exchange any order within 30 days.',
-    image: '/images/product-6.png',
+    image: img(6),
     rating: { rate: 3.9, count: 70 },
   },
   {
@@ -73,7 +75,7 @@ const mockProducts: Product[] = [
     price: 9.99,
     category: 'jewelery',
     description: 'Classic Created Wedding Engagement Solitaire Diamond Promise Ring.',
-    image: '/images/product-7.png',
+    image: img(7),
     rating: { rate: 3, count: 400 },
   },
   {
@@ -83,7 +85,7 @@ const mockProducts: Product[] = [
     category: 'jewelery',
     description:
       'Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel.',
-    image: '/images/product-8.png',
+    image: img(8),
     rating: { rate: 1.9, count: 100 },
   },
   {
@@ -92,7 +94,7 @@ const mockProducts: Product[] = [
     price: 64,
     category: 'electronics',
     description: 'USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance.',
-    image: '/images/product-9.png',
+    image: img(9),
     rating: { rate: 3.3, count: 203 },
   },
   {
@@ -101,7 +103,7 @@ const mockProducts: Product[] = [
     price: 109,
     category: 'electronics',
     description: 'Easy upgrade for faster boot up, shutdown, application load and response.',
-    image: '/images/product-10.png',
+    image: img(10),
     rating: { rate: 2.9, count: 470 },
   },
   {
@@ -110,7 +112,7 @@ const mockProducts: Product[] = [
     price: 109,
     category: 'electronics',
     description: '3D NAND flash are applied to deliver high transfer speeds and read performance.',
-    image: '/images/product-11.png',
+    image: img(11),
     rating: { rate: 4.8, count: 319 },
   },
   {
@@ -119,7 +121,7 @@ const mockProducts: Product[] = [
     price: 114,
     category: 'electronics',
     description: 'Expand your PS4 gaming experience, Play anywhere Fast and easy setup.',
-    image: '/images/product-12.png',
+    image: img(12),
     rating: { rate: 4.8, count: 400 },
   },
   {
@@ -128,7 +130,7 @@ const mockProducts: Product[] = [
     price: 599,
     category: 'electronics',
     description: '21.5 inches Full HD (1920 x 1080) widescreen IPS display Anti-glare panel.',
-    image: '/images/product-13.png',
+    image: img(13),
     rating: { rate: 2.9, count: 250 },
   },
   {
@@ -138,7 +140,7 @@ const mockProducts: Product[] = [
     category: 'electronics',
     description:
       '49 inch Super Ultrawide 32:9 curved gaming monitor with dual 27-inch screen side by side.',
-    image: '/images/product-14.png',
+    image: img(14),
     rating: { rate: 2.2, count: 140 },
   },
   {
@@ -147,7 +149,7 @@ const mockProducts: Product[] = [
     price: 56.99,
     category: "women's clothing",
     description: 'Note: The Jackets is US standard size, Please choose size as your usual size.',
-    image: '/images/product-15.png',
+    image: img(15),
     rating: { rate: 2.6, count: 235 },
   },
   {
@@ -156,7 +158,7 @@ const mockProducts: Product[] = [
     price: 29.95,
     category: "women's clothing",
     description: '100% Polyurethane shell, 100% Polyester lining, removable hood.',
-    image: '/images/product-16.png',
+    image: img(16),
     rating: { rate: 2.9, count: 340 },
   },
   {
@@ -165,7 +167,7 @@ const mockProducts: Product[] = [
     price: 39.99,
     category: "women's clothing",
     description: 'Lightweight, perfect for trip or casual wear. Long sleeve with hood.',
-    image: '/images/product-17.png',
+    image: img(17),
     rating: { rate: 3.8, count: 679 },
   },
   {
@@ -174,7 +176,7 @@ const mockProducts: Product[] = [
     price: 9.85,
     category: "women's clothing",
     description: '95% Rayon 5% Spandex, Made in USA or Imported, Do Not Bleach.',
-    image: '/images/product-18.png',
+    image: img(18),
     rating: { rate: 4.7, count: 130 },
   },
   {
@@ -183,7 +185,7 @@ const mockProducts: Product[] = [
     price: 7.95,
     category: "women's clothing",
     description: '100% Polyester, Machine wash, 100% cationic polyester interlock.',
-    image: '/images/product-19.png',
+    image: img(19),
     rating: { rate: 4.5, count: 146 },
   },
   {
@@ -192,7 +194,7 @@ const mockProducts: Product[] = [
     price: 12.99,
     category: "women's clothing",
     description: '95% Cotton, 5% Spandex, Features: Casual, Short Sleeve, Letter Print.',
-    image: '/images/product-20.png',
+    image: img(20),
     rating: { rate: 3.6, count: 145 },
   },
 ]
