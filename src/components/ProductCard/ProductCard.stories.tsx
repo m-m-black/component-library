@@ -17,7 +17,7 @@ const mockProduct: Product = {
   price: 109.95,
   category: "men's clothing",
   description: "Your perfect pack for everyday use and walks in the forest.",
-  image: 'https://picsum.photos/seed/product1/300/400',
+  image: '/images/product-1.png',
   rating: { rate: 3.9, count: 120 },
 }
 

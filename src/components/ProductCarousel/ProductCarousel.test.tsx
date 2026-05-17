@@ -10,7 +10,7 @@ const mockProducts: Product[] = [
     price: 109.95,
     category: "men's clothing",
     description: 'A great backpack.',
-    image: 'https://picsum.photos/seed/product1/300/400',
+    image: '/images/product-1.png',
     rating: { rate: 3.9, count: 120 },
   },
   {
@@ -19,7 +19,7 @@ const mockProducts: Product[] = [
     price: 22.30,
     category: "men's clothing",
     description: 'A slim-fit tee.',
-    image: 'https://picsum.photos/seed/product2/300/400',
+    image: '/images/product-2.png',
     rating: { rate: 4.1, count: 259 },
   },
   {
@@ -28,7 +28,7 @@ const mockProducts: Product[] = [
     price: 55.99,
     category: "men's clothing",
     description: 'A cotton jacket.',
-    image: 'https://picsum.photos/seed/product3/300/400',
+    image: '/images/product-3.png',
     rating: { rate: 4.7, count: 500 },
   },
 ]

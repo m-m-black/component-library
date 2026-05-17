@@ -18,7 +18,7 @@ const mockProducts: Product[] = [
     price: 109.95,
     category: "men's clothing",
     description: "Your perfect pack for everyday use.",
-    image: 'https://picsum.photos/seed/product1/300/400',
+    image: '/images/product-1.png',
     rating: { rate: 3.9, count: 120 },
   },
   {
@@ -27,7 +27,7 @@ const mockProducts: Product[] = [
     price: 22.30,
     category: "men's clothing",
     description: "Slim fit T-shirts in several colours.",
-    image: 'https://picsum.photos/seed/product2/300/400',
+    image: '/images/product-2.png',
     rating: { rate: 4.1, count: 259 },
   },
   {
@@ -36,7 +36,7 @@ const mockProducts: Product[] = [
     price: 55.99,
     category: "men's clothing",
     description: "Great outerwear for spring and autumn.",
-    image: 'https://picsum.photos/seed/product3/300/400',
+    image: '/images/product-3.png',
     rating: { rate: 4.7, count: 500 },
   },
   {
@@ -45,7 +45,7 @@ const mockProducts: Product[] = [
     price: 15.99,
     category: "furniture",
     description: "Comfortable outdoor seating.",
-    image: 'https://picsum.photos/seed/product4/300/400',
+    image: '/images/product-4.png',
     rating: { rate: 2.1, count: 430 },
   },
 ]

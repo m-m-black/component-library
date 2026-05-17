@@ -9,7 +9,7 @@ const mockProduct: Product = {
   price: 109.95,
   category: "men's clothing",
   description: 'A great backpack.',
-  image: 'https://picsum.photos/seed/product1/300/400',
+  image: '/images/product-1.png',
   rating: { rate: 3.9, count: 120 },
 }
 
