@@ -1,6 +1,6 @@
 # E-Commerce Component Library
 
-A portfolio React component library built for the e-commerce domain. Components are designed to be composable, accessible, and fully themed — supporting both light and dark modes out of the box.
+A React component library built for the e-commerce domain. Components are designed to be composable, accessible, and fully themed, supporting both light and dark modes.
 
 **[View Storybook](https://m-m-black.github.io/component-library/)**
 
@@ -8,18 +8,19 @@ A portfolio React component library built for the e-commerce domain. Components 
 
 | Component             | Description                                                            |
 | --------------------- | ---------------------------------------------------------------------- |
-| **Button**            | Primary, secondary, ghost, and destructive variants with loading state |
 | **Badge**             | Semantic sale, new, and out-of-stock labels                            |
+| **Button**            | Primary, secondary, ghost, and destructive variants with loading state |
+| **CartItem**          | Cart line item with quantity stepper and remove action                 |
+| **Drawer**            | Slide-in panel                                                         |
+| **Icon**              | Typed wrapper around Radix Icons with size and color props             |
 | **Input / SearchBar** | Text input with icon slot                                              |
-| **Rating**            | Star rating display with review count                                  |
+| **Modal**             | Accessible overlay dialog                                              |
 | **PriceDisplay**      | Original and discounted price formatting                               |
 | **ProductCard**       | Full product tile with image, rating, price, badge, and add-to-cart    |
 | **ProductCarousel**   | Horizontally scrollable row of product cards                           |
-| **CartItem**          | Cart line item with quantity stepper and remove action                 |
-| **Modal**             | Accessible overlay dialog                                              |
-| **Drawer**            | Slide-in panel                                                         |
-| **Toast**             | Programmatic feedback notifications                                    |
+| **Rating**            | Star rating display with review count                                  |
 | **ThemeToggle**       | Light / dark mode switcher                                             |
+| **Toast**             | Programmatic feedback notifications                                    |
 
 ## Tech stack
 
