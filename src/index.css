@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import '@fontsource-variable/dm-sans';
+@plugin 'tailwindcss-animate';
 
 /* ─── Theme: map Tailwind utilities to CSS variables ─────────────────────── */
 @theme inline {
