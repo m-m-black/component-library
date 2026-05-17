@@ -9,6 +9,7 @@ const config: StorybookConfig = {
     '@storybook/addon-a11y',
     '@storybook/addon-docs',
   ],
+  staticDirs: ['../public'],
   framework: '@storybook/react-vite',
   viteFinal: async (config: InlineConfig) => {
     return {
