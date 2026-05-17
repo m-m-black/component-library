@@ -11,7 +11,9 @@
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
   --color-success: var(--success);
+  --color-success-subtle: var(--success-subtle);
   --color-destructive: var(--destructive);
+  --color-destructive-subtle: var(--destructive-subtle);
   --color-warning: var(--warning);
 }
 
@@ -26,7 +28,9 @@
   --accent: oklch(55% 0.24 270); /* indigo-600 */
   --accent-foreground: oklch(100% 0 0); /* white */
   --success: oklch(55% 0.17 145); /* green-600 */
+  --success-subtle: oklch(97% 0.05 145); /* green-50 */
   --destructive: oklch(55% 0.22 25); /* red-600 */
+  --destructive-subtle: oklch(97% 0.04 25); /* red-50 */
   --warning: oklch(72% 0.18 70); /* amber-500 */
 }
 
@@ -41,7 +45,9 @@
   --accent: oklch(65% 0.22 270); /* indigo-400 */
   --accent-foreground: oklch(100% 0 0); /* white */
   --success: oklch(68% 0.17 145); /* green-400 */
+  --success-subtle: oklch(22% 0.07 145); /* green-950 */
   --destructive: oklch(68% 0.2 25); /* red-400 */
+  --destructive-subtle: oklch(22% 0.07 25); /* red-950 */
   --warning: oklch(82% 0.16 70); /* amber-300 */
 }
 

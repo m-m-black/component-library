@@ -29,8 +29,8 @@ const preview: Preview = {
   parameters: {
     viewport: {
       options: {
-        mobile: { name: 'Mobile', styles: { width: '390px', height: '844px' } },
-        desktop: { name: 'Desktop', styles: { width: '1024px', height: '900px' } },
+        mobile: { name: 'Mobile', styles: { width: '390px', height: '667px' } },
+        desktop: { name: 'Desktop', styles: { width: '1024px', height: '768px' } },
       },
       defaultViewport: 'desktop',
     },

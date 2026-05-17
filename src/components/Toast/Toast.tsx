@@ -5,7 +5,7 @@ import { Icon } from '../Icon'
 
 const toastVariants = cva(
   [
-    'flex items-start justify-between gap-4 rounded-lg border p-4 shadow-lg',
+    'flex items-start justify-between gap-4 rounded-lg border p-4 shadow-xl',
     'data-[state=open]:animate-in data-[state=closed]:animate-out',
     'data-[state=closed]:fade-out-80 data-[state=open]:fade-in-0',
     'data-[state=closed]:slide-out-to-right-full data-[state=open]:slide-in-from-right-full',
@@ -14,8 +14,8 @@ const toastVariants = cva(
     variants: {
       variant: {
         default: 'bg-surface-raised border-border text-text',
-        success: 'bg-success/10 border-success/30 text-text',
-        destructive: 'bg-destructive/10 border-destructive/30 text-text',
+        success: 'bg-success-subtle border-success text-text',
+        destructive: 'bg-destructive-subtle border-destructive text-text',
       },
     },
     defaultVariants: { variant: 'default' },
